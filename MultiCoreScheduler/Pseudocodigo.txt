@@ -1,0 +1,53 @@
+// Definição das Estruturas de Dados
+processador[N] // Array de N processadores
+filaDeProcessos // Fila de processos a serem distribuídos
+
+// Inicializar os Processadores
+Para cada processador em processador[N]:
+    processador.ativo = FALSO
+    processador.processoAtual = NULO
+
+// Função Principal para Distribuição de Processos
+enquanto existem processos na filaDeProcessos:
+    // Ordenar a fila de processos pelo tempo de chegada
+    ordenarFilaPorTempoDeChegada(filaDeProcessos)
+
+    Para cada processador em processador[N]:
+        se processador.ativo = FALSO e existem processos na filaDeProcessos:
+            processo = obterProximoProcesso(filaDeProcessos)
+            atribuirProcessoAoProcessador(processo, processador)
+
+    // Simula o tempo passando e a execução dos processos
+    avançarTempo(1)
+
+    Para cada processador em processador[N]:
+        se processador.ativo = VERDADEIRO:
+            processador.tempoRestante -= 1
+            se processador.tempoRestante = 0:
+                finalizarProcesso(processador)
+
+// Funções Auxiliares
+
+funcao ordenarFilaPorTempoDeChegada(filaDeProcessos):
+    // Ordena a fila de processos de acordo com o tempo de chegada em ordem crescente
+
+funcao obterProximoProcesso(filaDeProcessos):
+    // Retorna o primeiro processo na fila após a ordenação (aquele com menor tempo de chegada)
+
+funcao atribuirProcessoAoProcessador(processo, processador):
+    processador.ativo = VERDADEIRO
+    processador.processoAtual = processo
+    processador.tempoRestante = processo.duracao
+
+funcao finalizarProcesso(processador):
+    // Libera o processador e marca o processo como concluído
+    processador.ativo = FALSO
+    processador.processoAtual = NULO
+
+funcao avancarTempo(unidades):
+    tempoAtual += unidades
+
+// Função de Entrada Principal
+funcao main():
+    carregarProcessos() // Carrega os processos iniciais para a fila
+    iniciarDistribuicaoDeProcessos()
