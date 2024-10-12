@@ -1,4 +1,4 @@
-# MultiCoreScheduler
+# MultiCore-Scheduler-SO4
 
 Este é um projeto de um escalonador para sistemas multicore implementado em Rust. O objetivo do projeto é gerenciar tarefas em um sistema com múltiplos núcleos de processamento, distribuindo a carga de trabalho de forma eficiente entre os núcleos.
 
@@ -6,12 +6,12 @@ Este é um projeto de um escalonador para sistemas multicore implementado em Rus
 
 Codigos podem ser vistos na pastas SRC no link 
 ```
-https://github.com/KaikeVitorino/SistemasOperacionais_4o/tree/main/MultiCoreScheduler/src
+https://github.com/Kaike-Vitorino/MultiCore-Scheduler-SO4/tree/main/src
 ```
 A estrutura de diretórios do projeto é a seguinte:
 
 ```
-MultiCoreScheduler/
+MultiCore-Scheduler-SO4/
 │
 ├── src/
 │   ├── cpu.rs
@@ -25,7 +25,11 @@ MultiCoreScheduler/
 │
 ├── .gitignore
 ├── Cargo.lock
-└── Cargo.toml
+├── Cargo.toml
+│
+├── README.md
+└── Readme.pdf
+
 ```
 
 ### Descrição dos Arquivos
@@ -44,8 +48,8 @@ Para compilar e rodar o projeto, siga os passos abaixo:
 
 1. **Clone o repositório**:
    ```sh
-   git clone https://github.com/KaikeVitorino/SistemasOperacionais_4o.git
-   cd SistemasOperacionais_4o/MultiCoreScheduler
+   git clone https://github.com/Kaike-Vitorino/MultiCore-Scheduler-SO4.git
+   cd MultiCore-Scheduler-SO4/MultiCoreScheduler
    ```
 
 2. **Compile o projeto**:
